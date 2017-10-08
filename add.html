@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>发表问题 编辑问题 公用</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="keywords" content="fly,layui,前端社区">
+  <meta name="description" content="Fly社区是模块化前端UI框架Layui的官网社区，致力于为web开发提供强劲动力">
+  <link rel="stylesheet" type="text/css" href="../bootstrap3.3.5/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="res/layui/css/layui.css">
+  <link rel="stylesheet" href="res/css/global.css">
+  <link rel="stylesheet" href="../css/huiwan.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="css/add.css">
+</head>
+<body>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="huiwan-navbar navbar navbar-default navbar-static-top" role="navigation">
+              <div class="center-block">
+                  <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main_nav">
+                          <span class="sr-only">切换导航</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                      </button>
+                      <div class="navbar-brand">
+                          <a href="index.html">
+                              <img class="huiwan-logo" src="../img/logo.png">
+                          </a>
+                      </div>
+                  </div>
+                  <div class="navbar-collapse collapse" id="main_nav">
+                      <ul class="nav navbar-nav">
+                         <li><a href="/s/index.html">首页</a></li>
+                          <!-- <li><a href="teachingVideo.html">教学课程视频</a></li> -->
+                          <li><a href="/s/help.html">寻找帮助</a></li>
+                          <li><a href="/s/volunteer.html">志愿者计划</a> </li>
+                          <li><a href="/s/starwarsblocks/face/index.html">星际大战</a></li>
+                      	 <li><a href="/s/applab/applab.html">applab</a></li>
+                      	<li class="nav-active"><a href="/s/forum/bbs.html" >论坛</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+            
+	</div>
+</div>
+
+<div class="main layui-clear">
+<div style="text-align:right;"><a href="bbs.html" class="layui-btn jie-add1">返回论坛</a></div>
+  <div class="layui-form layui-form-pane">
+    <div>
+    <div class="layui-form-item">
+        <div class="layui-inline">
+          <label class="layui-form-label">所在专区</label>
+          <div class="layui-input-block">
+            <select lay-verify="required" name="class" class="zone_content">
+              <option></option>
+              <option value="1" >综合讨论区</option> 
+              <option value="2" >6-11岁儿童编程区</option> 
+              <option value="3" >App开发专区</option> 
+              <option value="4" >机器人创客专区</option> 
+              <option value="5" >3D打印专区</option> 
+              <option value="6" >闲聊灌水</option> 
+            </select>
+          </div>
+        </div>
+        
+        <div class="layui-inline">
+          <label class="layui-form-label">类别</label>
+          <div class="layui-input-block">
+            <select lay-verify="required" name="class" class="type_content">
+              <option></option>
+              <option value="1" >求助</option> 
+              <option value="2" >讨论</option> 
+              <option value="3" >分享</option> 
+              <option value="4" >随记</option> 
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="layui-form-item">
+        <label for="L_title" class="layui-form-label">标题</label>
+        <div class="layui-input-block">
+          <input type="text" id="L_title" name="title" required lay-verify="required" autocomplete="off" class="layui-input">
+        </div>
+      </div>
+      <div class="layui-form-item layui-form-text">
+        <div class="layui-input-block">
+          <textarea id="L_content" name="content" required lay-verify="required" placeholder="请输入内容" class="layui-textarea fly-editor" style="height: 260px;"></textarea>
+        </div>
+      </div>
+      
+      <div class="layui-form-item">
+        <a href="#" class="layui-btn publish">立即发布</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="aaa"></div>
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="res/layui/layui.js"></script>
+<script src="../js/global.js"></script>
+<script src="js/add.js"></script>
+<script>
+/* layui.cache.page = 'jie'; */
+layui.cache.user = {
+  username: '游客'
+  ,uid: -1
+  ,avatar: 'res/images/avatar/00.jpg'
+  ,experience: 83
+  ,sex: '男'
+};
+layui.config({
+  version: "1.0.0"
+  ,base: 'res/mods/'
+}).extend({
+  fly: 'index'
+}).use('fly', function(){
+  var fly = layui.fly;
+  //如果你是采用模版自带的编辑器，你需要开启以下语句来解析。
+  
+   /*$('.aaa').html(fly.content("face.[亲亲]"));*/
+   
+});
+
+</script>
+
+</body>
+</html>

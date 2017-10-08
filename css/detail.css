@@ -1,0 +1,53 @@
+.main {
+	margin-top:30px;
+}
+.main .layui-form-pane .layui-form-label {
+	width:112px;
+}
+.copy-reply_textarea{
+	
+}
+.btn-left{
+	float: right;
+}
+.post_del {
+	cursor:pointer;
+}
+.jie-add {
+	position:static;
+}
+.post_btn {
+	margin-bottom:44px;
+}
+.reply_content {
+	background-color:white;
+	margin-top:20px;
+}
+ul.post_reply>li{
+	 padding:15px;
+	 background-color:#eef; 
+	 border:1px solid #ddd;
+	 margin-bottom:10px;
+}
+ul.reply_mess>li {
+	padding:15px;
+}
+ul.reply_mess>li .reply_name {
+	padding-left:5px;
+	padding-right:5px;
+}
+ul.reply_mess>li .reply_txt {
+	display:inline-block;
+	margin:0;
+	color:black;
+}
+.isAccept{
+	display:none;
+}
+.isAccept_active{
+	display:line-block;
+}
+.jieda-body {
+	width:100%;
+	word-wrap:break-word;
+}
